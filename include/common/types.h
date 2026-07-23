@@ -6,5 +6,5 @@ using namespace std;
 
 namespace cache{
     using Key = string;
-    using value = string;
+    using Value = string;
 }

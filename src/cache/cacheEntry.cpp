@@ -1,4 +1,4 @@
-#include "cache/CacheEntry.h"
+#include "cache/cacheEntry.h"
 
 using namespace std;
 
@@ -14,6 +14,15 @@ CacheEntry::CacheEntry(const string& value)
 {
 }
 
+CacheEntry::CacheEntry(
+    const string& value,
+    chrono::seconds ttl
+)
+    : value_(value)
+{
+    setTTL(ttl);
+}
+
 const string& CacheEntry::getValue() const
 {
     return value_;
@@ -22,6 +31,24 @@ const string& CacheEntry::getValue() const
 void CacheEntry::setValue(const string& value)
 {
     value_ = value;
+}
+
+void CacheEntry::setTTL(chrono::seconds ttl)
+{
+    expiryTime_ = chrono::steady_clock::now() + ttl;
+}
+
+void CacheEntry::clearTTL()
+{
+    expiryTime_.reset();
+}
+
+bool CacheEntry::hasExpired() const
+{
+    if(!expiryTime_.has_value())
+        return false;
+
+    return chrono::steady_clock::now() >= *expiryTime_;
 }
 
 }

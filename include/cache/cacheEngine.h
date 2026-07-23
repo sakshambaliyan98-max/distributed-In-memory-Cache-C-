@@ -1,14 +1,14 @@
 #pragma once
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 
-#include "cache/CacheConfig.h"
-#include "cache/CacheEntry.h"
-#include "cache/CacheStats.h"
-#include "common/Status.h"
-#include "common/Types.h"
+#include "common/status.h"
+#include "cache/cacheConfig.h"
+#include "cache/cacheStats.h"
+#include "storage/IStorage.h"
+#include "eviction/EvictionPolicy.h"
 
 namespace cache
 {
@@ -17,30 +17,52 @@ class CacheEngine
 {
 private:
 
-    unordered_map<Key, CacheEntry> storage_;
-
     CacheConfig config_;
+
+    unique_ptr<IStorage> storage_;
+
+    unique_ptr<EvictionPolicy> evictionPolicy_;
 
     CacheStats stats_;
 
 public:
 
-    explicit CacheEngine(const CacheConfig& config = CacheConfig());
+    CacheEngine();
 
-    Status set(const Key& key,
-               const value& value);
+    CacheEngine(
+        const CacheConfig& config,
+        unique_ptr<IStorage> storage,
+        unique_ptr<EvictionPolicy> evictionPolicy
+    );
 
-    optional<value> get(const Key& key);
+    const CacheStats& getStats() const;
 
-    Status erase(const Key& key);
+    Status set(
+        const Key& key,
+        const Value& value
+    );
 
-    bool exists(const Key& key) const;
+    Status set(
+        const Key& key,
+        const Value& value,
+        chrono::seconds ttl
+    );
 
-    void clear();
+    optional<Value> get(
+        const Key& key
+    );
+
+    Status erase(
+        const Key& key
+    );
+
+    bool exists(
+        const Key& key
+    ) const;
 
     size_t size() const;
 
-    const CacheStats& getStats() const;
+    void clear();
 };
 
 }
