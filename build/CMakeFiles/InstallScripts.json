@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"E:/Distributed Cache/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

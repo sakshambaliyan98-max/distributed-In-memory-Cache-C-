@@ -209,15 +209,15 @@ make
 
 # Development Roadmap
 
-- [x] Project Structure
-- [x] Cache Models
+- [ ] Project Structure
+- [ ] Cache Models
 - [ ] Cache Engine
 - [ ] Storage Layer
 - [ ] Eviction Framework
 - [ ] LRU Cache
 - [ ] LFU Cache
 - [ ] TTL Support
-- [ ] TCP Server
+- [.] TCP Server
 - [ ] Command Protocol
 - [ ] Thread Pool
 - [ ] Persistence
@@ -261,6 +261,3 @@ This project explores concepts from:
 
 ---
 
-# License
-
-MIT License

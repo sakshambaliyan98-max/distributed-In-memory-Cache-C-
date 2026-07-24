@@ -1,0 +1,68 @@
+[
+{
+  "directory": "E:/Distributed Cache/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -I\"E:/Distributed Cache/include\" -g -std=c++17 -Wall -Wextra -Wpedantic -pthread -o CMakeFiles\\DistributedCache.dir\\src\\cache\\LRUEvictionPolicy.cpp.obj -c \"E:\\Distributed Cache\\src\\cache\\LRUEvictionPolicy.cpp\"",
+  "file": "E:/Distributed Cache/src/cache/LRUEvictionPolicy.cpp",
+  "output": "E:/Distributed Cache/build/CMakeFiles/DistributedCache.dir/src/cache/LRUEvictionPolicy.cpp.obj"
+},
+{
+  "directory": "E:/Distributed Cache/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -I\"E:/Distributed Cache/include\" -g -std=c++17 -Wall -Wextra -Wpedantic -pthread -o CMakeFiles\\DistributedCache.dir\\src\\cache\\cacheConfig.cpp.obj -c \"E:\\Distributed Cache\\src\\cache\\cacheConfig.cpp\"",
+  "file": "E:/Distributed Cache/src/cache/cacheConfig.cpp",
+  "output": "E:/Distributed Cache/build/CMakeFiles/DistributedCache.dir/src/cache/cacheConfig.cpp.obj"
+},
+{
+  "directory": "E:/Distributed Cache/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -I\"E:/Distributed Cache/include\" -g -std=c++17 -Wall -Wextra -Wpedantic -pthread -o CMakeFiles\\DistributedCache.dir\\src\\cache\\cacheEngine.cpp.obj -c \"E:\\Distributed Cache\\src\\cache\\cacheEngine.cpp\"",
+  "file": "E:/Distributed Cache/src/cache/cacheEngine.cpp",
+  "output": "E:/Distributed Cache/build/CMakeFiles/DistributedCache.dir/src/cache/cacheEngine.cpp.obj"
+},
+{
+  "directory": "E:/Distributed Cache/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -I\"E:/Distributed Cache/include\" -g -std=c++17 -Wall -Wextra -Wpedantic -pthread -o CMakeFiles\\DistributedCache.dir\\src\\cache\\cacheEntry.cpp.obj -c \"E:\\Distributed Cache\\src\\cache\\cacheEntry.cpp\"",
+  "file": "E:/Distributed Cache/src/cache/cacheEntry.cpp",
+  "output": "E:/Distributed Cache/build/CMakeFiles/DistributedCache.dir/src/cache/cacheEntry.cpp.obj"
+},
+{
+  "directory": "E:/Distributed Cache/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -I\"E:/Distributed Cache/include\" -g -std=c++17 -Wall -Wextra -Wpedantic -pthread -o CMakeFiles\\DistributedCache.dir\\src\\cache\\cacheStats.cpp.obj -c \"E:\\Distributed Cache\\src\\cache\\cacheStats.cpp\"",
+  "file": "E:/Distributed Cache/src/cache/cacheStats.cpp",
+  "output": "E:/Distributed Cache/build/CMakeFiles/DistributedCache.dir/src/cache/cacheStats.cpp.obj"
+},
+{
+  "directory": "E:/Distributed Cache/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -I\"E:/Distributed Cache/include\" -g -std=c++17 -Wall -Wextra -Wpedantic -pthread -o CMakeFiles\\DistributedCache.dir\\src\\cache\\storage\\HashMapStorage.cpp.obj -c \"E:\\Distributed Cache\\src\\cache\\storage\\HashMapStorage.cpp\"",
+  "file": "E:/Distributed Cache/src/cache/storage/HashMapStorage.cpp",
+  "output": "E:/Distributed Cache/build/CMakeFiles/DistributedCache.dir/src/cache/storage/HashMapStorage.cpp.obj"
+},
+{
+  "directory": "E:/Distributed Cache/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -I\"E:/Distributed Cache/include\" -g -std=c++17 -Wall -Wextra -Wpedantic -pthread -o CMakeFiles\\DistributedCache.dir\\src\\concurrency\\ThreadPool.cpp.obj -c \"E:\\Distributed Cache\\src\\concurrency\\ThreadPool.cpp\"",
+  "file": "E:/Distributed Cache/src/concurrency/ThreadPool.cpp",
+  "output": "E:/Distributed Cache/build/CMakeFiles/DistributedCache.dir/src/concurrency/ThreadPool.cpp.obj"
+},
+{
+  "directory": "E:/Distributed Cache/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -I\"E:/Distributed Cache/include\" -g -std=c++17 -Wall -Wextra -Wpedantic -pthread -o CMakeFiles\\DistributedCache.dir\\src\\network\\TcpServer.cpp.obj -c \"E:\\Distributed Cache\\src\\network\\TcpServer.cpp\"",
+  "file": "E:/Distributed Cache/src/network/TcpServer.cpp",
+  "output": "E:/Distributed Cache/build/CMakeFiles/DistributedCache.dir/src/network/TcpServer.cpp.obj"
+},
+{
+  "directory": "E:/Distributed Cache/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -I\"E:/Distributed Cache/include\" -g -std=c++17 -Wall -Wextra -Wpedantic -pthread -o CMakeFiles\\DistributedCache.dir\\src\\protocol\\CommandHandler.cpp.obj -c \"E:\\Distributed Cache\\src\\protocol\\CommandHandler.cpp\"",
+  "file": "E:/Distributed Cache/src/protocol/CommandHandler.cpp",
+  "output": "E:/Distributed Cache/build/CMakeFiles/DistributedCache.dir/src/protocol/CommandHandler.cpp.obj"
+},
+{
+  "directory": "E:/Distributed Cache/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -I\"E:/Distributed Cache/include\" -g -std=c++17 -Wall -Wextra -Wpedantic -pthread -o CMakeFiles\\DistributedCache.dir\\src\\protocol\\CommandParser.cpp.obj -c \"E:\\Distributed Cache\\src\\protocol\\CommandParser.cpp\"",
+  "file": "E:/Distributed Cache/src/protocol/CommandParser.cpp",
+  "output": "E:/Distributed Cache/build/CMakeFiles/DistributedCache.dir/src/protocol/CommandParser.cpp.obj"
+},
+{
+  "directory": "E:/Distributed Cache/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -I\"E:/Distributed Cache/include\" -g -std=c++17 -Wall -Wextra -Wpedantic -pthread -o CMakeFiles\\DistributedCache.dir\\src\\server\\main.cpp.obj -c \"E:\\Distributed Cache\\src\\server\\main.cpp\"",
+  "file": "E:/Distributed Cache/src/server/main.cpp",
+  "output": "E:/Distributed Cache/build/CMakeFiles/DistributedCache.dir/src/server/main.cpp.obj"
+}
+]

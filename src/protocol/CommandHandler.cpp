@@ -81,7 +81,7 @@ string CommandHandler::handleDelete(const Command& command)
 
     if(status == Status::KEY_NOT_FOUND)
     {
-        return "ERROR key not found";
+        return "NOT_FOUND";
     }
 
     return "OK";
@@ -104,7 +104,7 @@ string CommandHandler::handleStats(const Command& command)
         return "ERROR wrong number of arguments for 'STATS'";
     }
 
-    CacheStats stats = engine_.getStats();
+    const CacheStats stats = engine_.getStats();
 
     return "hits=" + to_string(stats.getHits())
         + " misses=" + to_string(stats.getMisses())
