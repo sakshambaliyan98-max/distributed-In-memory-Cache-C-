@@ -14,6 +14,7 @@ namespace cache
 class IStorage
 {
 public:
+    virtual vector<pair<Key, CacheEntry>> entries() const = 0;
 
     virtual ~IStorage() = default;
 

@@ -55,7 +55,20 @@ void HashMapStorage::clear()
 {
     storage_.clear();
 }
+vector<pair<Key, CacheEntry>>
+HashMapStorage::entries() const
+{
+    vector<pair<Key, CacheEntry>> result;
 
+    result.reserve(storage_.size());
+
+    for(const auto& [key, entry] : storage_)
+    {
+        result.emplace_back(key, entry);
+    }
+
+    return result;
+}
 size_t HashMapStorage::size() const
 {
     return storage_.size();

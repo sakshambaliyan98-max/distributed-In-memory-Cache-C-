@@ -16,6 +16,7 @@ private:
 public:
 
     HashMapStorage();
+    vector<pair<Key, CacheEntry>> entries() const override;
 
     Status set(
         const Key& key,

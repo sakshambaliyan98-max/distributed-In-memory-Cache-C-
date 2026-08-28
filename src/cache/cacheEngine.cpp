@@ -26,8 +26,9 @@ CacheEngine::CacheEngine(
 {
 }
 
-const CacheStats& CacheEngine::getStats() const
+CacheStats CacheEngine::getStats() const
 {
+    lock_guard<mutex> lock(mutex_);
     return stats_;
 }
 
@@ -36,6 +37,8 @@ Status CacheEngine::set(
     const Value& value
 )
 {
+    lock_guard<mutex> lock(mutex_);
+
     CacheEntry entry(value);
 
     if(storage_->exists(key))
@@ -67,6 +70,8 @@ Status CacheEngine::set(
     chrono::seconds ttl
 )
 {
+    lock_guard<mutex> lock(mutex_);
+
     CacheEntry entry(value, ttl);
 
     if(storage_->exists(key))
@@ -96,6 +101,8 @@ optional<Value> CacheEngine::get(
     const Key& key
 )
 {
+    lock_guard<mutex> lock(mutex_);
+
     auto entry = storage_->find(key);
 
     if(entry == nullptr)
@@ -123,6 +130,8 @@ Status CacheEngine::erase(
     const Key& key
 )
 {
+    lock_guard<mutex> lock(mutex_);
+
     if(!storage_->exists(key))
         return Status::KEY_NOT_FOUND;
 
@@ -136,6 +145,8 @@ bool CacheEngine::exists(
     const Key& key
 ) const
 {
+    lock_guard<mutex> lock(mutex_);
+
     auto entry = storage_->find(key);
 
     if(entry == nullptr)
@@ -146,11 +157,13 @@ bool CacheEngine::exists(
 
 size_t CacheEngine::size() const
 {
+    lock_guard<mutex> lock(mutex_);
     return storage_->size();
 }
 
 void CacheEngine::clear()
 {
+    lock_guard<mutex> lock(mutex_);
     storage_->clear();
     evictionPolicy_->clear();
 }
